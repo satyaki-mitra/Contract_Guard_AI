@@ -1,10 +1,15 @@
 # LLM Providers
 openai>=1.0.0              # OpenAI API
 anthropic>=0.18.0          # Anthropic Claude API
-
+Ollama
 
 requests                 # For Ollama
 transformers             # For Legal-BERT
 sentence-transformers    # For embeddings
 torch                    # PyTorch
-
+pypdf2
+python_docx
+PyMuPDF
+spacy
+pydantic-settings
+pydantic
