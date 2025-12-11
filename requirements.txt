@@ -1,3 +1,5 @@
+--extra-index-url https://pypi.org/simple/ https://huggingface.github.io/llama-cpp-python-wheels/
+
 # Core Dependencies
 fastapi>=0.104.1
 uvicorn[standard]>=0.24.0
@@ -11,7 +13,7 @@ transformers>=4.35.0
 sentence-transformers>=2.2.2
 tokenizers>=0.14.0
 safetensors>=0.4.0
-accelerate>=0.24.0  
+accelerate>=0.24.0
 
 # Data Processing & Math
 numpy>=1.24.0
@@ -19,48 +21,48 @@ pandas>=2.1.0
 scipy>=1.11.0
 
 # Text Processing
-spacy>=3.7.0 
+spacy>=3.7.0
 
 # PDF Generation
 reportlab>=4.0.0
-Pillow>=10.0.0  
+Pillow>=10.0.0
 
-# Document Processing 
-PyPDF2>=3.0.0 
-PyMuPDF>=1.23.0  
-python-docx>=1.1.0 
+# Document Processing
+PyPDF2>=3.0.0
+PyMuPDF>=1.23.0
+python-docx>=1.1.0
 
 # HTTP Requests
 requests>=2.31.0
 
 # LLM Providers
-openai>=1.0.0  
-anthropic>=0.5.0  
+openai>=1.0.0
+anthropic>=0.5.0
 
-# For Huggingface Spaces
-llama-cpp-python>=0.2.20  # For CPU-only GGUF models on HF Spaces
-huggingface-hub>=0.19.0   # For downloading GGUF models
+# For Hugging Face Spaces
+llama-cpp-python==0.3.16        # pinned to version with pre-built wheel
+huggingface-hub>=0.19.0
 
 # Text Processing Utilities
-chardet>=5.0.0  
-langdetect>=1.0.9  
+chardet>=5.0.0
+langdetect>=1.0.9
 
 # Utilities
-tqdm>=4.66.0 
+tqdm>=4.66.0
 python-dateutil>=2.8.0
-typing-extensions>=4.8.0 
+typing-extensions>=4.8.0
 
-# Async Support 
+# Async Support
 anyio>=3.7.0
 
 # OS Interaction
-psutil>=5.9.5 
+psutil>=5.9.5
 
 # Better JSON for numpy serialization
 orjson>=3.9.0
 
 # For spaCy performance
-blis>=0.7.10 
+blis>=0.7.10
 
 # Additional for spaCy model
 spacy-transformers>=1.2.0
