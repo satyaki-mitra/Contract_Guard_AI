@@ -301,8 +301,8 @@ pip install llama-cpp-python huggingface-hub
 
 ```bash
 # Clone repository
-git clone https://github.com/satyaki-mitra/contract-guard-ai.git  
-cd contract-guard-ai
+git clone https://github.com/satyaki-mitra/ContractIntel_AI.git  
+cd ContractIntel_AI
 
 # Create virtual environment
 python -m venv venv
@@ -434,7 +434,7 @@ asyncio: concurrent processing
 ### Project Structure
 
 ```
-contract-guard-ai/
+ContractIntel_AI/
 │
 ├── app.py                      # FastAPI application (main entry)
 ├── requirements.txt            # Python dependencies
