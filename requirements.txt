@@ -6,8 +6,7 @@ pydantic-settings
 python-multipart
 
 # CPU-only PyTorch
-torch==2.2.0+cpu
---extra-index-url https://download.pytorch.org/whl/cpu
+torch>=2.6.0 --index-url https://download.pytorch.org/whl/cpu
 
 # Embeddings / Transformers
 transformers
