@@ -14,7 +14,7 @@ RUN apt-get update && apt-get install -y \
 # Install Python dependencies (wheels only — no compilation)
 COPY requirements.txt .
 RUN pip install --no-cache-dir --upgrade pip && \
-    pip install --no-cache-dir --only-binary=llama-cpp-python -r requirements.txt
+    pip install --no-cache-dir -r requirements.txt
 
 # Download spaCy model
 RUN python -m spacy download en_core_web_sm
