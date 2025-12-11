@@ -4,7 +4,6 @@ emoji: 📝
 colorFrom: blue
 colorTo: purple
 sdk: docker
-accelerator: gpu
 license: mit
 ---
 
