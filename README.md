@@ -26,16 +26,11 @@ license: mit
 [![Docker](https://img.shields.io/badge/Docker-Ready-2496ed)](https://docker.com/)
 [![spaCy](https://img.shields.io/badge/spaCy-3.7+-09a3d5)](https://spacy.io/)
 
-> **Democratizing Legal Intelligence Through AI**  
-> Comprehensive contract risk analysis using an integrated pipeline with Legal-BERT, multi-model NLP, and LLM interpretation
+> **Democratizing Legal Intelligence Through AI**   
+
+Comprehensive contract risk analysis using an integrated pipeline with Legal-BERT, multi-model NLP, and LLM interpretation
 
 > **⚠️ Important Disclaimer**: This tool provides AI-assisted contract analysis and is not a substitute for professional legal advice. Always consult a qualified attorney for legal matters. The AI may produce inaccurate or incomplete analyses.
-
-
-> **🔐 Data Privacy**: Choose your deployment carefully:
-> - **Local deployment** (Ollama/Llama.cpp) = Maximum privacy
-> - **Cloud deployment** = Files processed on external servers
-> - **API providers** (OpenAI/Anthropic) = Contract text sent to third parties
 
 </div>
 
