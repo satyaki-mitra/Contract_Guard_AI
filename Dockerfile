@@ -5,12 +5,13 @@ ENV PIP_NO_CACHE_DIR=1
 
 WORKDIR /app
 
-# System deps (lightweight)
+# System deps (lightweight) - ADD pthread development headers
 RUN apt-get update && apt-get install -y --no-install-recommends \
     build-essential \
     libglib2.0-0 \
     libjpeg62-turbo \
     poppler-utils \
+    libpthread-stubs0-dev \
     && rm -rf /var/lib/apt/lists/*
 
 COPY requirements.txt /app/requirements.txt

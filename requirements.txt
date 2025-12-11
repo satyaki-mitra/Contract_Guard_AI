@@ -16,8 +16,9 @@ tokenizers
 safetensors
 accelerate
 
-# Local LLM (prebuilt wheels)
-llama-cpp-python==0.2.65
+# Local LLM
+llama-cpp-python>=0.3.0 --prefer-binary
+huggingface-hub
 
 # Data
 numpy
