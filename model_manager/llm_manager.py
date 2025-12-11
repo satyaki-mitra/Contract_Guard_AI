@@ -652,10 +652,15 @@ class LLMManager:
         """
         Lazy load the Llama.cpp model
         """
-        log_info("Loading Llama.cpp model", model_path=str(settings.LLAMA_CPP_MODEL_PATH))
+        # Handle None model path
+        if settings.LLAMA_CPP_MODEL_PATH is None:
+            settings.LLAMA_CPP_MODEL_PATH = settings.MODEL_CACHE_DIR / settings.LLAMA_CPP_MODEL_FILE
+            log_info(f"Model path was None, set to: {settings.LLAMA_CPP_MODEL_PATH}")
+    
+        log_info("Loading Llama.cpp model", model_path = str(settings.LLAMA_CPP_MODEL_PATH))
         
         # Ensure model exists, download if needed
-        if( not settings.LLAMA_CPP_MODEL_PATH.exists()):
+        if (not settings.LLAMA_CPP_MODEL_PATH.exists()):
             self._download_llama_cpp_model()
         
         # Load model with appropriate GPU layers / CPU loading

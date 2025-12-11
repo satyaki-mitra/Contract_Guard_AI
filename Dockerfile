@@ -5,6 +5,7 @@ ENV PIP_NO_CACHE_DIR=1
 ENV DOCKER_CONTAINER=true  
 ENV SPACE_APP_DATA=/data
 ENV HF_HOME=/data/huggingface
+ENV LLAMA_CPP_MODEL_PATH=/data/models/Hermes-2-Pro-Llama-3-8B-GGUF.Q4_K_M.gguf
 
 # Optimize llama-cpp-python build for CPU only
 ENV CMAKE_ARGS="-DLLAMA_BLAS=0 -DLLAMA_CUBLAS=0"
@@ -37,6 +38,17 @@ RUN python -m spacy download en_core_web_sm
 # Create directories that your app expects
 RUN mkdir -p /data/models /data/uploads /data/cache /data/logs /data/huggingface
 
+# Download GGUF model during build (BEFORE copying app code)
+RUN python -c "from huggingface_hub import hf_hub_download; \
+    import shutil; \
+    downloaded = hf_hub_download( \
+        repo_id='NousResearch/Hermes-2-Pro-Llama-3-8B-GGUF', \
+        filename='Hermes-2-Pro-Llama-3-8B-GGUF.Q4_K_M.gguf', \
+        cache_dir='/data/huggingface' \
+    ); \
+    shutil.copy(downloaded, '/data/models/Hermes-2-Pro-Llama-3-8B-GGUF.Q4_K_M.gguf')" && \
+    echo "Model downloaded to /data/models/"
+
 # Copy app code
 COPY . .
 
@@ -46,7 +58,7 @@ RUN chmod -R 755 /app && \
 
 # Health check
 HEALTHCHECK --interval=30s --timeout=10s --start-period=30s --retries=3 \
-    CMD curl -f http://localhost:7860/docs || exit 1  # Changed to /docs endpoint
+    CMD curl -f http://localhost:7860/api/v1/health || exit 1
 
 EXPOSE 7860
 

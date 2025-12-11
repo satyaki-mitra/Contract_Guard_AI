@@ -91,10 +91,10 @@ class Settings(BaseSettings):
     HF_API_TOKEN           : Optional[str]                                      = None   # HF token for gated models
     
     # LLM Generation Settings (Shared across providers)
-    LLM_TEMPERATURE        : float                                              = 0.1      # Default for all providers
-    LLM_MAX_TOKENS         : int                                                = 1024     # Default for all providers
-    LLM_TOP_P              : float                                              = 0.95     # Default top-p sampling
-    LLM_REPEAT_PENALTY     : float                                              = 1.1      # Default repeat penalty
+    LLM_TEMPERATURE        : float                                              = 0.1    # Default for all providers
+    LLM_MAX_TOKENS         : int                                                = 1024   # Default for all providers
+    LLM_TOP_P              : float                                              = 0.95   # Default top-p sampling
+    LLM_REPEAT_PENALTY     : float                                              = 1.1    # Default repeat penalty
     LLM_SYSTEM_PROMPT      : str                                                = "You are a helpful legal assistant specializing in contract analysis and risk assessment."
     
     # Analysis Limits
