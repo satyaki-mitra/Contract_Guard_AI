@@ -1,4 +1,4 @@
-FROM python:3.11-slim-bookworm
+FROM python:3.11-slim
 
 WORKDIR /app
 
@@ -11,10 +11,10 @@ RUN apt-get update && apt-get install -y \
     libgomp1 \
     && rm -rf /var/lib/apt/lists/*
 
-# Install Python dependencies (wheels only — no compilation!)
+# Install Python dependencies (wheels only — no compilation)
 COPY requirements.txt .
 RUN pip install --no-cache-dir --upgrade pip && \
-    pip install --no-cache-dir -r requirements.txt
+    pip install --no-cache-dir --only-binary=llama-cpp-python -r requirements.txt
 
 # Download spaCy model
 RUN python -m spacy download en_core_web_sm
