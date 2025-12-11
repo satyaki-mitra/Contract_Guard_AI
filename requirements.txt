@@ -17,7 +17,7 @@ safetensors
 accelerate
 
 # Local LLM
-llama-cpp-python>=0.3.0 --prefer-binary
+llama-cpp-python[server]==0.2.20
 huggingface-hub
 
 # Data
