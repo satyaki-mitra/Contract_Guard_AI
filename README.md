@@ -592,10 +592,10 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 ---
 
-## 👥 Author
+## 👤 Author
 
-Satyaki Mitra
-Data Scientist | AI-ML Enthusiast
+**Satyaki Mitra**  
+*Data Scientist | AI-ML Enthusiast*
 
 ---
 
